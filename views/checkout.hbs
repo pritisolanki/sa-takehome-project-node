@@ -4,7 +4,7 @@
       <h1>
         Checkout — Stripe Press
       </h1>
-      <h5 class="text-secondary">
+      <h5 class="text-secondary" id="purchase_item_title">
         {{title}}
       </h5>
       <hr class="mt-40">
@@ -14,16 +14,18 @@
     </div>
     <div class="card box-shadow mt-40">
       <div class="card-body">
-        <form name="payment-form">
+        <form id="payment-form">
           <div>
             <label for="email">Email address</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com">
           </div>
           <div class="mt-20 text-center text-secondary border-placeholder">
-            Add Stripe Element here!
+           <div id="card-element"></div>
+           <div>&nbsp;</div>
+            <div id="card-errors" role="alert"></div>
           </div>
           <div class="mt-20">
-            <button type="submit" class="btn btn-lg btn-block btn-primary">Pay $<span class="amount" data-amount="{{amount}}"></span></button>
+            <button id="submit" type="submit" class="btn btn-lg btn-block btn-primary">Pay $<span class="amount" data-amount="{{amount}}"></span></button>
           </div>
         </form>
       </div>
