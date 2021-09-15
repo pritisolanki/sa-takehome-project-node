@@ -81,9 +81,11 @@ $(document).ready(function() {
           carderrElement.innerHTML = result.error.message;
         } else {
           // The payment has been processed!
+          console.log(result);
           if (result.paymentIntent.status === 'succeeded') {
             productname = $("#purchase_item_title").text().trim();
-            urlRedirect = `/success?id=${result.paymentIntent.id}&item=${productname}&amt=${orderTotal}`
+            
+            urlRedirect = `/success?id=${result.paymentIntent.id}&item=${productname}&amt=${(result.paymentIntent.amount/100).toFixed(2)}`
             const htmlContent = fetch(urlRedirect,{
               method: 'GET'
             });

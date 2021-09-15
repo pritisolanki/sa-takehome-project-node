@@ -25,3 +25,8 @@ npm start
 ```
 
 Navigate to [http://localhost:3000](http://localhost:3000) to view the index page.
+
+
+## Stripe API Key Management
+I am using test mode and enabled rolling key feature. You might need to use your developer test accounts
+[Roll Keys] https://stripe.com/docs/keys#rolling-keys
